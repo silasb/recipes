@@ -23,6 +23,7 @@ func main() {
 	app.Use(logger.New())
 
 	routes.AuthRoutes(app)
+	routes.WS(app)
 	routes.TodoRoutes(app)
 
 	app.Listen(fmt.Sprintf(":%v", config.PORT))
